@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login - Online Food Delivery Website</title>
+    <title>Register - Online Food Delivery Website</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <!-- Fontawesome CSS -->
@@ -108,26 +108,36 @@
     </header>
     <!-- Navigation Section End -->
 
-    <!-- Login Section Start -->
-    <section class="auth login">
+    <!-- Register Section Start -->
+    <section class="auth register">
       <div class="container">
         <div class="auth-container">
           <div class="auth-image">
-            <img src="img/food/b1.jpg" alt="Login" />
+            <img src="img/food/p1.jpg" alt="Register" />
             <div class="auth-overlay">
-              <h2>Welcome Back!</h2>
-              <p>Login to access your favorite meals and order history</p>
+              <h2>Join Our Foodie Community</h2>
+              <p>Experience the best food delivery service in town</p>
             </div>
           </div>
 
           <div class="auth-form">
-            <h2 class="text-center">Login</h2>
+            <h2 class="text-center">Create Account</h2>
             <div class="heading-border"></div>
 
             <form action="" class="form">
               <div class="input-group">
+                <i class="fa fa-user"></i>
+                <input type="text" placeholder="Full Name" required />
+              </div>
+
+              <div class="input-group">
                 <i class="fa fa-envelope"></i>
                 <input type="email" placeholder="Email Address" required />
+              </div>
+
+              <div class="input-group">
+                <i class="fa fa-phone"></i>
+                <input type="tel" placeholder="Phone Number" />
               </div>
 
               <div class="input-group">
@@ -136,40 +146,36 @@
                 <i class="fa fa-eye-slash toggle-password"></i>
               </div>
 
+              <div class="input-group">
+                <i class="fa fa-lock"></i>
+                <input
+                  type="password"
+                  placeholder="Confirm Password"
+                  required
+                />
+                <i class="fa fa-eye-slash toggle-password"></i>
+              </div>
+
               <div class="checkbox-wrapper">
-                <input type="checkbox" id="remember" />
-                <label for="remember">Remember me</label>
-                <a href="#" class="forgot-password">Forgot Password?</a>
+                <input type="checkbox" id="terms" required />
+                <label for="terms"
+                  >I agree to the <a href="#">Terms & Conditions</a></label
+                >
               </div>
 
-              <button type="submit" class="btn-primary auth-btn">Login</button>
-
-              <div class="social-login">
-                <p>Or login with</p>
-                <div class="social-buttons">
-                  <button type="button" class="social-btn facebook">
-                    <i class="fa fa-facebook"></i>
-                  </button>
-                  <button type="button" class="social-btn google">
-                    <i class="fa fa-google"></i>
-                  </button>
-                  <button type="button" class="social-btn twitter">
-                    <i class="fa fa-twitter"></i>
-                  </button>
-                </div>
-              </div>
+              <button type="submit" class="btn-primary auth-btn">
+                Create Account
+              </button>
 
               <div class="auth-links">
-                <p>
-                  Don't have an account? <a href="register.html">Register</a>
-                </p>
+                <p>Already have an account? <a href="login.html">Login</a></p>
               </div>
             </form>
           </div>
         </div>
       </div>
     </section>
-    <!-- Login Section End -->
+    <!-- Register Section End -->
 
     <!-- Footer Section Start -->
     <section class="footer">

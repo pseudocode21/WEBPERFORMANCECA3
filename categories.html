@@ -1,186 +1,626 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Food Delivery Website</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Categories - Online Food Delivery</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" />
     <!-- Hover CSS -->
-    <link rel="stylesheet" href="css/hover-min.css">
+    <link rel="stylesheet" href="css/hover-min.css" />
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Category CSS -->
+    <link rel="stylesheet" href="css/category.css" />
+  </head>
+  <body>
     <!-- Navigation Section Start -->
     <header class="navbar">
-        <nav id="site-top-nav" class="navbar-menu navbar-fixed-top">
-            <div class="container">
-                <!-- logo -->
-                <div class="logo">
-                    <a href="index.html" title="Logo">
-                        <img src="img/logo.png" alt="Logo" class="img-responsive">
-                    </a>
+      <nav id="site-top-nav" class="navbar-menu navbar-fixed-top">
+        <div class="container">
+          <!-- logo -->
+          <div class="logo">
+            <a href="index.html" title="Logo">
+              <img src="img/logo.png" alt="Logo" class="img-responsive" />
+            </a>
+          </div>
+          <!-- Main Menu -->
+          <div class="menu text-right">
+            <ul>
+              <li>
+                <a class="hvr-underline-from-center" href="index.html">Home</a>
+              </li>
+              <li>
+                <a
+                  class="hvr-underline-from-center active"
+                  href="categories.html"
+                  >Categories</a
+                >
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="foods.html">Foods</a>
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="order.html">Order</a>
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="contact.html"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a class="hvr-underline-from-center" href="login.html">Login</a>
+              </li>
+              <li>
+                <a id="shopping-cart" class="shopping-cart">
+                  <i class="fa fa-cart-arrow-down"></i>
+                  <span class="badge">4</span>
+                </a>
+                <div id="cart-content" class="cart-content">
+                  <h3 class="text-center">Shopping Cart</h3>
+                  <table class="cart-table" border="0">
+                    <tr>
+                      <th>Food</th>
+                      <th>Name</th>
+                      <th>Price</th>
+                      <th>Qty</th>
+                      <th>Total</th>
+                      <th>Action</th>
+                    </tr>
+                    <tr>
+                      <td><img src="img/food/p1.jpg" alt="Food" /></td>
+                      <td>Pizza</td>
+                      <td>$ 8.00</td>
+                      <td>1</td>
+                      <td>$ 8.00</td>
+                      <td><a href="#" class="btn-delete">&times;</a></td>
+                    </tr>
+                    <tr>
+                      <td><img src="img/food/s1.jpg" alt="Food" /></td>
+                      <td>Sandwich</td>
+                      <td>$ 8.00</td>
+                      <td>1</td>
+                      <td>$ 8.00</td>
+                      <td><a href="#" class="btn-delete">&times;</a></td>
+                    </tr>
+                    <tr>
+                      <td><img src="img/food/b1.jpg" alt="Food" /></td>
+                      <td>Burder</td>
+                      <td>$ 8.00</td>
+                      <td>1</td>
+                      <td>$ 8.00</td>
+                      <td><a href="#" class="btn-delete">&times;</a></td>
+                    </tr>
+                    <tr>
+                      <th colspan="4">Total</th>
+                      <th>$24.00$</th>
+                      <th></th>
+                    </tr>
+                  </table>
+                  <a href="order.html" class="btn-primary">Confirm Order</a>
                 </div>
-                <!-- Main Menu -->
-                <div class="menu text-right">
-                    <ul>
-                        <li><a class="hvr-underline-from-center" href="index.html">Home</a></li>
-                        <li><a class="hvr-underline-from-center" href="categories.html">Categories</a></li>
-                        <li><a class="hvr-underline-from-center" href="foods.html">Foods</a></li>
-                        <li><a class="hvr-underline-from-center" href="order.html">Order</a></li>
-                        <li><a class="hvr-underline-from-center" href="contact.html">Contact</a></li>
-                        <li><a class="hvr-underline-from-center" href="login.html">Login</a></li>
-                        <li>
-                            <a id="shopping-cart" class="shopping-cart">
-                                <i class="fa fa-cart-arrow-down"></i>
-                                <span class="badge">4</span>
-                            </a>
-                            <div id="cart-content" class="cart-content">
-                                <h3 class="text-center">Shopping Cart</h3>
-                                <table class="cart-table" border="0">
-                                    <tr>
-                                        <th>Food</th>
-                                        <th>Name</th>
-                                        <th>Price</th>
-                                        <th>Qty</th>
-                                        <th>Total</th>
-                                        <th>Action</th>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="img/food/p1.jpg" alt="Food"></td>
-                                        <td>Pizza</td>
-                                        <td>$ 8.00</td>
-                                        <td>1</td>
-                                        <td>$ 8.00</td>
-                                        <td><a href="#" class="btn-delete">&times;</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="img/food/s1.jpg" alt="Food"></td>
-                                        <td>Sandwich</td>
-                                        <td>$ 8.00</td>
-                                        <td>1</td>
-                                        <td>$ 8.00</td>
-                                        <td><a href="#" class="btn-delete">&times;</a></td>
-                                    </tr>
-                                    <tr>
-                                        <td><img src="img/food/b1.jpg" alt="Food"></td>
-                                        <td>Burder</td>
-                                        <td>$ 8.00</td>
-                                        <td>1</td>
-                                        <td>$ 8.00</td>
-                                        <td><a href="#" class="btn-delete">&times;</a></td>
-                                    </tr>
-                                    <tr>
-                                        <th colspan="4">Total</th>
-                                        <th>$24.00$</th>
-                                        <th></th>
-                                    </tr>
-                                </table>
-                                <a href="order.html" class="btn-primary">Confirm Order</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
     </header>
     <!-- Navigation Section End -->
 
-    <!-- Category Section Start -->
-    <section class="categories">
-        <div class="container">
-            <h2 class="text-center">Explore Foods</h2>
-            <div class="heading-border"></div>
-
-            <div class="grid-3">
-                <a href="category-foods.html">
-                    <div class="float-container">
-                        <img src="img/category/pizza.jpg" class="img-responsive" alt="">
-                        <h3 class="float-text text-white">Pizza</h3>
-                    </div>
-                </a>
-                <a href="category-foods.html">
-                    <div class="float-container">
-                        <img src="img/category/sandwich.jpg" class="img-responsive" alt="">
-                        <h3 class="float-text text-white">Sandwich</h3>
-                    </div>
-                </a>
-                <a href="category-foods.html">
-                    <div class="float-container">
-                        <img src="img/category/burger.jpg" class="img-responsive" alt="">
-                        <h3 class="float-text text-white">Burger</h3>
-                    </div>
-                </a>
-                <a href="category-foods.html">
-                    <div class="float-container">
-                        <img src="img/category/pizza.jpg" class="img-responsive" alt="">
-                        <h3 class="float-text text-white">Pizza</h3>
-                    </div>
-                </a>
-                <a href="category-foods.html">
-                    <div class="float-container">
-                        <img src="img/category/sandwich.jpg" class="img-responsive" alt="">
-                        <h3 class="float-text text-white">Sandwich</h3>
-                    </div>
-                </a>
-                <a href="category-foods.html">
-                    <div class="float-container">
-                        <img src="img/category/burger.jpg" class="img-responsive" alt="">
-                        <h3 class="float-text text-white">Burger</h3>
-                    </div>
-                </a>
-            </div>
+    <!-- Category Hero Section Start -->
+    <section class="category-hero">
+      <div class="container">
+        <div class="hero-content">
+          <h1>Discover <span>Delicious</span> Categories</h1>
+          <p>
+            Explore our wide range of food categories and find your perfect meal
+          </p>
+          <div class="category-search">
+            <input type="text" placeholder="Search categories..." />
+            <button class="btn-primary">
+              <i class="fa fa-search"></i> Search
+            </button>
+          </div>
         </div>
+      </div>
     </section>
-    <!-- Category Section End -->
+    <!-- Category Hero Section End -->
+
+    <!-- Featured Categories Section Start -->
+    <section class="featured-categories">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="text-center">Featured Categories</h2>
+          <div class="heading-border"></div>
+          <p class="text-center">
+            Our most popular food categories curated for you
+          </p>
+        </div>
+
+        <div class="category-tags">
+          <a href="#all" class="category-tag active">All</a>
+          <a href="#italian" class="category-tag">Italian</a>
+          <a href="#american" class="category-tag">American</a>
+          <a href="#chinese" class="category-tag">Chinese</a>
+          <a href="#indian" class="category-tag">Indian</a>
+          <a href="#mexican" class="category-tag">Mexican</a>
+          <a href="#japanese" class="category-tag">Japanese</a>
+        </div>
+
+        <div class="category-grid">
+          <a href="category-foods.html" class="category-card">
+            <div class="category-icon">
+              <i class="fa fa-cutlery"></i>
+            </div>
+            <img src="img/category/pizza.jpg" alt="Pizza" />
+            <div class="category-content">
+              <h3>Pizza</h3>
+              <span class="category-count">28 items</span>
+              <div class="category-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <span>(4.5)</span>
+              </div>
+            </div>
+          </a>
+          <a href="category-foods.html" class="category-card">
+            <div class="category-icon">
+              <i class="fa fa-cutlery"></i>
+            </div>
+            <img src="img/category/burger.jpg" alt="Burger" />
+            <div class="category-content">
+              <h3>Burger</h3>
+              <span class="category-count">24 items</span>
+              <div class="category-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <span>(4.0)</span>
+              </div>
+            </div>
+          </a>
+          <a href="category-foods.html" class="category-card">
+            <div class="category-icon">
+              <i class="fa fa-cutlery"></i>
+            </div>
+            <img src="img/category/sandwich.jpg" alt="Sandwich" />
+            <div class="category-content">
+              <h3>Sandwich</h3>
+              <span class="category-count">18 items</span>
+              <div class="category-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-half-o"></i>
+                <span>(4.6)</span>
+              </div>
+            </div>
+          </a>
+          <a href="category-foods.html" class="category-card">
+            <div class="category-icon">
+              <i class="fa fa-cutlery"></i>
+            </div>
+            <img src="img/food/b1.jpg" alt="Pasta" />
+            <div class="category-content">
+              <h3>Pasta</h3>
+              <span class="category-count">15 items</span>
+              <div class="category-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o"></i>
+                <span>(4.2)</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Featured Categories Section End -->
+
+    <!-- Popular Categories Section Start -->
+    <section class="popular-categories">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="text-center">Most Popular Categories</h2>
+          <div class="heading-border"></div>
+          <p class="text-center">
+            The most ordered food categories by our customers
+          </p>
+        </div>
+
+        <div class="popular-slider">
+          <div class="popular-slide">
+            <div class="popular-card">
+              <div class="popular-img">
+                <img src="img/category/pizza.jpg" alt="Italian Pizza" />
+                <div class="popular-badge">Top Rated</div>
+              </div>
+              <div class="popular-info">
+                <h3>Italian Pizza</h3>
+                <p>Authentic Italian pizzas with fresh toppings</p>
+                <div class="popular-meta">
+                  <span><i class="fa fa-fire"></i> 5200+ orders</span>
+                  <a href="category-foods.html" class="popular-btn">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popular-slide">
+            <div class="popular-card">
+              <div class="popular-img">
+                <img src="img/category/burger.jpg" alt="Gourmet Burgers" />
+                <div class="popular-badge">Most Ordered</div>
+              </div>
+              <div class="popular-info">
+                <h3>Gourmet Burgers</h3>
+                <p>Premium burgers with specialty toppings</p>
+                <div class="popular-meta">
+                  <span><i class="fa fa-fire"></i> 4800+ orders</span>
+                  <a href="category-foods.html" class="popular-btn">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popular-slide">
+            <div class="popular-card">
+              <div class="popular-img">
+                <img src="img/category/sandwich.jpg" alt="Club Sandwiches" />
+                <div class="popular-badge">Trending</div>
+              </div>
+              <div class="popular-info">
+                <h3>Club Sandwiches</h3>
+                <p>Triple-decker sandwiches with fresh ingredients</p>
+                <div class="popular-meta">
+                  <span><i class="fa fa-fire"></i> 3900+ orders</span>
+                  <a href="category-foods.html" class="popular-btn">Explore</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Popular Categories Section End -->
+
+    <!-- Newest Cuisines Section Start -->
+    <section class="newest-cuisines">
+      <div class="container">
+        <div class="section-heading light">
+          <h2 class="text-center">Newest Cuisines</h2>
+          <div class="heading-border"></div>
+          <p class="text-center">Discover our latest additions to the menu</p>
+        </div>
+
+        <div class="newest-wrapper">
+          <div class="newest-left">
+            <div class="newest-big">
+              <img src="img/food/p1.jpg" alt="Thai Cuisine" />
+              <div class="newest-content">
+                <span class="newest-tag">New</span>
+                <h3>Thai Cuisine</h3>
+                <p>Authentic flavors from Thailand</p>
+                <a href="category-foods.html" class="btn-primary"
+                  >Explore Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="newest-right">
+            <div class="newest-small">
+              <img src="img/food/s1.jpg" alt="Mediterranean" />
+              <div class="newest-content">
+                <span class="newest-tag">New</span>
+                <h3>Mediterranean</h3>
+                <a href="category-foods.html" class="btn-small">View</a>
+              </div>
+            </div>
+            <div class="newest-small">
+              <img src="img/food/b1.jpg" alt="Korean BBQ" />
+              <div class="newest-content">
+                <span class="newest-tag">New</span>
+                <h3>Korean BBQ</h3>
+                <a href="category-foods.html" class="btn-small">View</a>
+              </div>
+            </div>
+            <div class="newest-small">
+              <img src="img/category/pizza.jpg" alt="Fusion Dishes" />
+              <div class="newest-content">
+                <span class="newest-tag">New</span>
+                <h3>Fusion Dishes</h3>
+                <a href="category-foods.html" class="btn-small">View</a>
+              </div>
+            </div>
+            <div class="newest-small">
+              <img src="img/category/burger.jpg" alt="Vegan Options" />
+              <div class="newest-content">
+                <span class="newest-tag">New</span>
+                <h3>Vegan Options</h3>
+                <a href="category-foods.html" class="btn-small">View</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Newest Cuisines Section End -->
+
+    <!-- All Categories Section Start -->
+    <section class="all-categories">
+      <div class="container">
+        <div class="section-heading">
+          <h2 class="text-center">Browse All Categories</h2>
+          <div class="heading-border"></div>
+          <p class="text-center">
+            Explore our complete collection of food categories
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <a href="category-foods.html">
+            <div class="float-container">
+              <img
+                src="img/category/pizza.jpg"
+                class="img-responsive"
+                alt="Pizza"
+              />
+              <h3 class="float-text text-white">Pizza</h3>
+            </div>
+          </a>
+          <a href="category-foods.html">
+            <div class="float-container">
+              <img
+                src="img/category/sandwich.jpg"
+                class="img-responsive"
+                alt="Sandwich"
+              />
+              <h3 class="float-text text-white">Sandwich</h3>
+            </div>
+          </a>
+          <a href="category-foods.html">
+            <div class="float-container">
+              <img
+                src="img/category/burger.jpg"
+                class="img-responsive"
+                alt="Burger"
+              />
+              <h3 class="float-text text-white">Burger</h3>
+            </div>
+          </a>
+          <a href="category-foods.html">
+            <div class="float-container">
+              <img src="img/food/p1.jpg" class="img-responsive" alt="Pasta" />
+              <h3 class="float-text text-white">Pasta</h3>
+            </div>
+          </a>
+          <a href="category-foods.html">
+            <div class="float-container">
+              <img src="img/food/s1.jpg" class="img-responsive" alt="Salads" />
+              <h3 class="float-text text-white">Salads</h3>
+            </div>
+          </a>
+          <a href="category-foods.html">
+            <div class="float-container">
+              <img
+                src="img/food/b1.jpg"
+                class="img-responsive"
+                alt="Desserts"
+              />
+              <h3 class="float-text text-white">Desserts</h3>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- All Categories Section End -->
+
+    <!-- Testimonials Section Start -->
+    <section class="testimonials">
+      <div class="container">
+        <h2 class="text-center">What Food Lovers Say</h2>
+        <div class="heading-border"></div>
+
+        <div class="testimonials-slider">
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <i class="fa fa-quote-left"></i>
+                <p>
+                  I love how well organized the food categories are! It made
+                  finding my favorite Italian dishes so much easier. The layout
+                  is intuitive and the images are mouth-watering. Definitely my
+                  go-to food ordering site now!
+                </p>
+              </div>
+              <div class="testimonial-info">
+                <div class="testimonial-img">
+                  <img src="img/food/p2.jpg" alt="Customer" />
+                </div>
+                <div class="testimonial-meta">
+                  <h4>Emma Wilson</h4>
+                  <span>Food Explorer</span>
+                  <div class="testimonial-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <i class="fa fa-quote-left"></i>
+                <p>
+                  The cuisine diversity is amazing! I've discovered so many new
+                  food categories I never knew existed. The detailed
+                  descriptions and authentic photos helped me step out of my
+                  comfort zone and try new dishes!
+                </p>
+              </div>
+              <div class="testimonial-info">
+                <div class="testimonial-img">
+                  <img src="img/food/b2.jpg" alt="Customer" />
+                </div>
+                <div class="testimonial-meta">
+                  <h4>David Chen</h4>
+                  <span>Culinary Adventurer</span>
+                  <div class="testimonial-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star-half-o"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <div class="testimonial-text">
+                <i class="fa fa-quote-left"></i>
+                <p>
+                  As someone with dietary restrictions, I appreciate how clearly
+                  each food category is labeled. Finding gluten-free and
+                  vegetarian options has never been easier! The filtering system
+                  is excellent and saves me so much time.
+                </p>
+              </div>
+              <div class="testimonial-info">
+                <div class="testimonial-img">
+                  <img src="img/food/s2.jpg" alt="Customer" />
+                </div>
+                <div class="testimonial-meta">
+                  <h4>Sophia Martinez</h4>
+                  <span>Health-Conscious Diner</span>
+                  <div class="testimonial-rating">
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                    <i class="fa fa-star"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonials Section End -->
+
+    <!-- Subscribe Section Start -->
+    <section class="subscribe-section">
+      <div class="container">
+        <div class="subscribe-wrapper">
+          <div class="subscribe-content">
+            <h2>Subscribe to our Newsletter</h2>
+            <p>
+              Get updates on new categories, special offers, and exclusive deals
+            </p>
+          </div>
+          <form class="subscribe-form">
+            <input type="email" placeholder="Enter your email address" />
+            <button type="submit" class="btn-primary">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Subscribe Section End -->
 
     <!-- Footer Section Start -->
     <section class="footer">
-        <div class="container">
-            <div class="grid-3">
-                <div class="text-center">
-                    <h3>About Us</h3><br>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat officia, temporibus expedita dicta eligendi harum architecto fugiat sint, laudantium omnis animi. Voluptas praesentium maiores minima pariatur necessitatibus consequuntur, similique assumenda.</p>
-                </div>
-                <div class="texr-center">
-                    <h3>Site Map</h3><br>
-                    <div class="site-links">
-                        <a href="categories.html">Categories</a>
-                        <a href="foods.html">Foods</a>
-                        <a href="order.html">Order</a>
-                        <a href="contact.html">Contact</a>
-                        <a href="login.html">Login</a>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <h3>Social Links</h3><br>
-                    <div class="social">
-                        <ul>
-                            <li><a href="#"><img src="https://img.icons8.com/color/48/null/facebook-new.png"/></a></li>
-                            <li><a href="#"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png"/></a></li>
-                            <li><a href="#"><img src="https://img.icons8.com/color/48/null/twitter--v1.png"/></a></li>
-                            <li><a href="#"><img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png"/></a></li>
-                            <li><a href="#"><img src="https://img.icons8.com/color/48/null/youtube-play.png"/></a></li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="grid-3">
+          <div class="text-center">
+            <h3>About Us</h3>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat
+              officia, temporibus expedita dicta eligendi harum architecto
+              fugiat sint, laudantium omnis animi. Voluptas praesentium maiores
+              minima pariatur necessitatibus consequuntur, similique assumenda.
+            </p>
+          </div>
+          <div class="texr-center">
+            <h3>Site Map</h3>
+            <br />
+            <div class="site-links">
+              <a href="categories.html">Categories</a>
+              <a href="foods.html">Foods</a>
+              <a href="order.html">Order</a>
+              <a href="contact.html">Contact</a>
+              <a href="login.html">Login</a>
+              <a href="register.html">Register</a>
             </div>
+          </div>
+          <div class="social-links">
+            <h3>Social Links</h3>
+            <br />
+            <div class="social">
+              <ul>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/facebook-new.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/fluency/48/null/instagram-new.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/twitter--v1.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png"
+                  /></a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><img
+                      src="https://img.icons8.com/color/48/null/youtube-play.png"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Footer Section End -->
 
     <!-- Copyright Section start -->
     <section class="copyright">
-        <div class="container text-center">
-            <p>All rights reserved. Design By <a href="#">Code Arcade</a></p>
-        </div>
-        <a id="back-to-top" class="btn-primary">
-            <i class="fa fa-angle-double-up"></i>
-        </a>
+      <div class="container text-center">
+        <p>All rights reserved. Design By <a href="#">Code Arcade</a></p>
+      </div>
+      <a id="back-to-top" class="btn-primary">
+        <i class="fa fa-angle-double-up"></i>
+      </a>
     </section>
     <!-- Copyright Section End -->
 
@@ -190,5 +630,5 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
-</body>
+  </body>
 </html>

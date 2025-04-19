@@ -1,552 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Online Food Delivery Website</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <!-- Fontawesome CSS -->
-    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="css/font-awesome/css/font-awesome.css">
     <!-- Hover CSS -->
-    <link rel="stylesheet" href="css/hover-min.css" />
+    <link rel="stylesheet" href="css/hover-min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
     <!-- Navigation Section Start -->
     <header class="navbar">
-      <nav id="site-top-nav" class="navbar-menu navbar-fixed-top">
-        <div class="container">
-          <!-- logo -->
-          <div class="logo">
-            <a href="index.html" title="Logo">
-              <img src="img/logo.png" alt="Logo" class="img-responsive" />
-            </a>
-          </div>
-          <!-- Main Menu -->
-          <div class="menu text-right">
-            <ul>
-              <li>
-                <a class="hvr-underline-from-center" href="index.html">Home</a>
-              </li>
-              <li>
-                <a class="hvr-underline-from-center" href="categories.html"
-                  >Categories</a
-                >
-              </li>
-              <li>
-                <a class="hvr-underline-from-center" href="foods.html">Foods</a>
-              </li>
-              <li>
-                <a class="hvr-underline-from-center" href="order.html">Order</a>
-              </li>
-              <li>
-                <a class="hvr-underline-from-center" href="contact.html"
-                  >Contact</a
-                >
-              </li>
-              <li>
-                <a class="hvr-underline-from-center" href="login.html"
-                  >Sign In</a
-                >
-              </li>
-              <li>
-                <a id="shopping-cart" class="shopping-cart">
-                  <i class="fa fa-cart-arrow-down"></i>
-                  <span class="badge">4</span>
-                </a>
-                <div id="cart-content" class="cart-content">
-                  <h3 class="text-center">Shopping Cart</h3>
-                  <table class="cart-table" border="0">
-                    <tr>
-                      <th>Food</th>
-                      <th>Name</th>
-                      <th>Price</th>
-                      <th>Qty</th>
-                      <th>Total</th>
-                      <th>Action</th>
-                    </tr>
-                    <tr>
-                      <td><img src="img/food/p1.jpg" alt="Food" /></td>
-                      <td>Pizza</td>
-                      <td>$ 8.00</td>
-                      <td>1</td>
-                      <td>$ 8.00</td>
-                      <td><a href="#" class="btn-delete">&times;</a></td>
-                    </tr>
-                    <tr>
-                      <td><img src="img/food/s1.jpg" alt="Food" /></td>
-                      <td>Sandwich</td>
-                      <td>$ 8.00</td>
-                      <td>1</td>
-                      <td>$ 8.00</td>
-                      <td><a href="#" class="btn-delete">&times;</a></td>
-                    </tr>
-                    <tr>
-                      <td><img src="img/food/b1.jpg" alt="Food" /></td>
-                      <td>Burder</td>
-                      <td>$ 8.00</td>
-                      <td>1</td>
-                      <td>$ 8.00</td>
-                      <td><a href="#" class="btn-delete">&times;</a></td>
-                    </tr>
-                    <tr>
-                      <th colspan="4">Total</th>
-                      <th>$24.00$</th>
-                      <th></th>
-                    </tr>
-                  </table>
-                  <a href="order.html" class="btn-primary">Confirm Order</a>
+        <nav id="site-top-nav" class="navbar-menu navbar-fixed-top">
+            <div class="container">
+                <!-- logo -->
+                <div class="logo">
+                    <a href="index.html" title="Logo">
+                        <img src="img/logo.png" alt="Logo" class="img-responsive">
+                    </a>
                 </div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+                <!-- Main Menu -->
+                <div class="menu text-right">
+                    <ul>
+                        <li><a class="hvr-underline-from-center" href="index.html">Home</a></li>
+                        <li><a class="hvr-underline-from-center" href="categories.html">Categories</a></li>
+                        <li><a class="hvr-underline-from-center" href="foods.html">Foods</a></li>
+                        <li><a class="hvr-underline-from-center" href="order.html">Order</a></li>
+                        <li><a class="hvr-underline-from-center" href="contact.html">Contact</a></li>
+                        <li><a class="hvr-underline-from-center" href="login.html">Login</a></li>
+                        <li>
+                            <a id="shopping-cart" class="shopping-cart">
+                                <i class="fa fa-cart-arrow-down"></i>
+                                <span class="badge">4</span>
+                            </a>
+                            <div id="cart-content" class="cart-content">
+                                <h3 class="text-center">Shopping Cart</h3>
+                                <table class="cart-table" border="0">
+                                    <tr>
+                                        <th>Food</th>
+                                        <th>Name</th>
+                                        <th>Price</th>
+                                        <th>Qty</th>
+                                        <th>Total</th>
+                                        <th>Action</th>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="img/food/p1.jpg" alt="Food"></td>
+                                        <td>Pizza</td>
+                                        <td>$ 8.00</td>
+                                        <td>1</td>
+                                        <td>$ 8.00</td>
+                                        <td><a href="#" class="btn-delete">&times;</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="img/food/s1.jpg" alt="Food"></td>
+                                        <td>Sandwich</td>
+                                        <td>$ 8.00</td>
+                                        <td>1</td>
+                                        <td>$ 8.00</td>
+                                        <td><a href="#" class="btn-delete">&times;</a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><img src="img/food/b1.jpg" alt="Food"></td>
+                                        <td>Burder</td>
+                                        <td>$ 8.00</td>
+                                        <td>1</td>
+                                        <td>$ 8.00</td>
+                                        <td><a href="#" class="btn-delete">&times;</a></td>
+                                    </tr>
+                                    <tr>
+                                        <th colspan="4">Total</th>
+                                        <th>$24.00$</th>
+                                        <th></th>
+                                    </tr>
+                                </table>
+                                <a href="order.html" class="btn-primary">Confirm Order</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
     </header>
     <!-- Navigation Section End -->
 
     <!-- Food Search Section Start -->
-    <section class="food-search text-center">
-      <div class="container">
-        <form action="food-search.html">
-          <input type="search" placeholder="Search for food..." required />
-          <input type="submit" value="Search" class="btn-primary" />
-        </form>
-      </div>
+    <section class="food-search text-center" >
+        <div class="container">
+            <form action="food-search.html">
+                <input type="search" placeholder="Search for food..." required>
+                <input type="submit" value="Search" class="btn-primary">
+            </form>
+        </div>
     </section>
     <!-- Food Search Section End -->
 
-    <!-- Hero Section Start -->
-    <section class="hero-section text-center">
-      <div class="container">
-        <h1>Delicious Food Delivered To Your Doorstep</h1>
-        <p class="hero-text">
-          Experience the best cuisine from top local restaurants delivered fast
-          and fresh. Our premium delivery service ensures your food arrives hot
-          and ready to enjoy.
-        </p>
-        <div class="hero-cta">
-          <a href="foods.html" class="btn-primary">Order Now</a>
-          <a href="categories.html" class="btn-secondary">View Menu</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-box">
-            <i class="fa fa-cutlery"></i>
-            <h3>100+</h3>
-            <p>Restaurants</p>
-          </div>
-          <div class="stat-box">
-            <i class="fa fa-users"></i>
-            <h3>500+</h3>
-            <p>Happy Customers</p>
-          </div>
-          <div class="stat-box">
-            <i class="fa fa-motorcycle"></i>
-            <h3>30 min</h3>
-            <p>Fast Delivery</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Hero Section End -->
-
     <!-- Category Section Start -->
     <section class="categories">
-      <div class="container">
-        <h2 class="text-center">Explore Foods</h2>
-        <div class="heading-border"></div>
+        <div class="container">
+            <h2 class="text-center">Explore Foods</h2>
+            <div class="heading-border"></div>
 
-        <div class="grid-3">
-          <a href="category-foods.html">
-            <div class="float-container">
-              <img src="img/category/pizza.jpg" class="img-responsive" alt="" />
-              <h3 class="float-text text-white">Pizza</h3>
+            <div class="grid-3">
+                <a href="category-foods.html">
+                    <div class="float-container">
+                        <img src="img/category/pizza.jpg" class="img-responsive" alt="">
+                        <h3 class="float-text text-white">Pizza</h3>
+                    </div>
+                </a>
+                <a href="category-foods.html">
+                    <div class="float-container">
+                        <img src="img/category/sandwich.jpg" class="img-responsive" alt="">
+                        <h3 class="float-text text-white">Sandwich</h3>
+                    </div>
+                </a>
+                <a href="category-foods.html">
+                    <div class="float-container">
+                        <img src="img/category/burger.jpg" class="img-responsive" alt="">
+                        <h3 class="float-text text-white">Burger</h3>
+                    </div>
+                </a>
             </div>
-          </a>
-          <a href="category-foods.html">
-            <div class="float-container">
-              <img
-                src="img/category/sandwich.jpg"
-                class="img-responsive"
-                alt=""
-              />
-              <h3 class="float-text text-white">Sandwich</h3>
-            </div>
-          </a>
-          <a href="category-foods.html">
-            <div class="float-container">
-              <img
-                src="img/category/burger.jpg"
-                class="img-responsive"
-                alt=""
-              />
-              <h3 class="float-text text-white">Burger</h3>
-            </div>
-          </a>
         </div>
-      </div>
     </section>
     <!-- Category Section End -->
 
     <!-- Foods Section Start -->
     <section class="food-menu">
-      <div class="container">
-        <h2 class="text-center">Food Menu</h2>
-        <div class="heading-border"></div>
-        <div class="grid-2">
-          <div class="food-menu-box">
-            <form action="">
-              <div class="food-menu-img">
-                <img
-                  src="img/food/p1.jpg"
-                  alt=""
-                  class="img-responsive img-curve"
-                />
-              </div>
-              <div class="food-menu-desc">
-                <h4>Pizza</h4>
-                <p class="food-price">$8.00</p>
-                <p class="food-details">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus excepturi porro.
-                </p>
-                <input type="number" value="1" min="1" />
-                <input type="submit" class="btn-primary" value="Add To Cart" />
-              </div>
-            </form>
-          </div>
-          <div class="food-menu-box">
-            <form action="">
-              <div class="food-menu-img">
-                <img
-                  src="img/food/s1.jpg"
-                  alt=""
-                  class="img-responsive img-curve"
-                />
-              </div>
-              <div class="food-menu-desc">
-                <h4>Sandwich</h4>
-                <p class="food-price">$8.00</p>
-                <p class="food-details">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus excepturi porro.
-                </p>
-                <input type="number" value="1" min="1" />
-                <input type="submit" class="btn-primary" value="Add To Cart" />
-              </div>
-            </form>
-          </div>
-          <div class="food-menu-box">
-            <form action="">
-              <div class="food-menu-img">
-                <img
-                  src="img/food/b1.jpg"
-                  alt=""
-                  class="img-responsive img-curve"
-                />
-              </div>
-              <div class="food-menu-desc">
-                <h4>Burger</h4>
-                <p class="food-price">$8.00</p>
-                <p class="food-details">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus excepturi porro.
-                </p>
-                <input type="number" value="1" min="1" />
-                <input type="submit" class="btn-primary" value="Add To Cart" />
-              </div>
-            </form>
-          </div>
-          <div class="food-menu-box">
-            <form action="">
-              <div class="food-menu-img">
-                <img
-                  src="img/food/p1.jpg"
-                  alt=""
-                  class="img-responsive img-curve"
-                />
-              </div>
-              <div class="food-menu-desc">
-                <h4>Pizza</h4>
-                <p class="food-price">$8.00</p>
-                <p class="food-details">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus excepturi porro.
-                </p>
-                <input type="number" value="1" min="1" />
-                <input type="submit" class="btn-primary" value="Add To Cart" />
-              </div>
-            </form>
-          </div>
-          <div class="food-menu-box">
-            <form action="">
-              <div class="food-menu-img">
-                <img
-                  src="img/food/s1.jpg"
-                  alt=""
-                  class="img-responsive img-curve"
-                />
-              </div>
-              <div class="food-menu-desc">
-                <h4>Sandwich</h4>
-                <p class="food-price">$8.00</p>
-                <p class="food-details">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus excepturi porro.
-                </p>
-                <input type="number" value="1" min="1" />
-                <input type="submit" class="btn-primary" value="Add To Cart" />
-              </div>
-            </form>
-          </div>
-          <div class="food-menu-box">
-            <form action="">
-              <div class="food-menu-img">
-                <img
-                  src="img/food/b1.jpg"
-                  alt=""
-                  class="img-responsive img-curve"
-                />
-              </div>
-              <div class="food-menu-desc">
-                <h4>Burger</h4>
-                <p class="food-price">$8.00</p>
-                <p class="food-details">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Ducimus excepturi porro.
-                </p>
-                <input type="number" value="1" min="1" />
-                <input type="submit" class="btn-primary" value="Add To Cart" />
-              </div>
-            </form>
-          </div>
+        <div class="container">
+            <h2 class="text-center">Food Menu</h2>
+            <div class="heading-border"></div>
+            <div class="grid-2">
+                <div class="food-menu-box">
+                    <form action="">
+                        <div class="food-menu-img">
+                            <img src="img/food/p1.jpg" alt="" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Pizza</h4>
+                            <p class="food-price">$8.00</p>
+                            <p class="food-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus excepturi porro.</p>
+                            <input type="number" value="1" min="1">
+                            <input type="submit" class="btn-primary" value="Add To Cart">
+                        </div>
+                    </form>
+                </div>
+                <div class="food-menu-box">
+                    <form action="">
+                        <div class="food-menu-img">
+                            <img src="img/food/s1.jpg" alt="" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Sandwich</h4>
+                            <p class="food-price">$8.00</p>
+                            <p class="food-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus excepturi porro.</p>
+                            <input type="number" value="1" min="1">
+                            <input type="submit" class="btn-primary" value="Add To Cart">
+                        </div>
+                    </form>
+                </div>
+                <div class="food-menu-box">
+                    <form action="">
+                        <div class="food-menu-img">
+                            <img src="img/food/b1.jpg" alt="" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Burger</h4>
+                            <p class="food-price">$8.00</p>
+                            <p class="food-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus excepturi porro.</p>
+                            <input type="number" value="1" min="1">
+                            <input type="submit" class="btn-primary" value="Add To Cart">
+                        </div>
+                    </form>
+                </div>
+                <div class="food-menu-box">
+                    <form action="">
+                        <div class="food-menu-img">
+                            <img src="img/food/p1.jpg" alt="" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Pizza</h4>
+                            <p class="food-price">$8.00</p>
+                            <p class="food-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus excepturi porro.</p>
+                            <input type="number" value="1" min="1">
+                            <input type="submit" class="btn-primary" value="Add To Cart">
+                        </div>
+                    </form>
+                </div>
+                <div class="food-menu-box">
+                    <form action="">
+                        <div class="food-menu-img">
+                            <img src="img/food/s1.jpg" alt="" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Sandwich</h4>
+                            <p class="food-price">$8.00</p>
+                            <p class="food-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus excepturi porro.</p>
+                            <input type="number" value="1" min="1">
+                            <input type="submit" class="btn-primary" value="Add To Cart">
+                        </div>
+                    </form>
+                </div>
+                <div class="food-menu-box">
+                    <form action="">
+                        <div class="food-menu-img">
+                            <img src="img/food/b1.jpg" alt="" class="img-responsive img-curve">
+                        </div>
+                        <div class="food-menu-desc">
+                            <h4>Burger</h4>
+                            <p class="food-price">$8.00</p>
+                            <p class="food-details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus excepturi porro.</p>
+                            <input type="number" value="1" min="1">
+                            <input type="submit" class="btn-primary" value="Add To Cart">
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-      </div>
-      <p class="text-center">
-        <a href="foods.html" class="btn-primary">See All Foods</a>
-      </p>
+        <p class="text-center">
+            <a href="foods.html" class="btn-primary">See All Foods</a>
+        </p>
     </section>
     <!-- Foods Section End -->
 
-    <!-- Testimonials Section Start -->
-    <section class="testimonials">
-      <div class="container">
-        <h2 class="text-center">What Our Customers Say</h2>
-        <div class="heading-border"></div>
-        <div class="testimonial-grid">
-          <div class="testimonial-box">
-            <div class="testimonial-img">
-              <img
-                src="img/testimonials/customer1.jpg"
-                alt="Customer 1"
-                class="img-responsive img-circle"
-              />
-            </div>
-            <div class="testimonial-content">
-              <p>
-                "The food was amazing and delivery was super quick! Definitely
-                ordering again."
-              </p>
-              <h4>Sarah Johnson</h4>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-box">
-            <div class="testimonial-img">
-              <img
-                src="img/testimonials/customer2.jpg"
-                alt="Customer 2"
-                class="img-responsive img-circle"
-              />
-            </div>
-            <div class="testimonial-content">
-              <p>
-                "Great selection of restaurants and the app is so easy to use.
-                Food always arrives hot!"
-              </p>
-              <h4>Mike Thompson</h4>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star-half-o"></i>
-              </div>
-            </div>
-          </div>
-          <div class="testimonial-box">
-            <div class="testimonial-img">
-              <img
-                src="img/testimonials/customer3.jpg"
-                alt="Customer 3"
-                class="img-responsive img-circle"
-              />
-            </div>
-            <div class="testimonial-content">
-              <p>
-                "The best food delivery service I've used. Love the variety and
-                quality of restaurants!"
-              </p>
-              <h4>Emily Garcia</h4>
-              <div class="rating">
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-                <i class="fa fa-star"></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Testimonials Section End -->
-
-    <!-- Download App Section Start -->
-    <section class="app-download">
-      <div class="container">
-        <div class="app-flex">
-          <div class="app-content">
-            <h2>Download Our Mobile App</h2>
-            <p>
-              Get exclusive offers and track your orders in real-time with our
-              mobile app. Available for iOS and Android devices.
-            </p>
-            <div class="app-buttons">
-              <a href="#" class="app-btn">
-                <i class="fa fa-apple"></i>
-                <span>Download on<br /><strong>App Store</strong></span>
-              </a>
-              <a href="#" class="app-btn">
-                <i class="fa fa-android"></i>
-                <span>Get it on<br /><strong>Google Play</strong></span>
-              </a>
-            </div>
-          </div>
-          <div class="app-image">
-            <img
-              src="img/app-mockup.png"
-              alt="Mobile App"
-              class="img-responsive"
-            />
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Download App Section End -->
-
     <!-- Footer Section Start -->
     <section class="footer">
-      <div class="container">
-        <div class="grid-4">
-          <div class="footer-about">
-            <h3>About Us</h3>
-            <p>
-              We connect you with the best local restaurants to bring delicious
-              food right to your doorstep. Our mission is to provide fast,
-              reliable delivery and exceptional customer service.
-            </p>
-            <p>
-              Founded in 2020, we've been serving thousands of happy customers
-              with quality food delivery services.
-            </p>
-          </div>
-          <div class="footer-links">
-            <h3>Quick Links</h3>
-            <div class="site-links">
-              <a href="index.html">Home</a>
-              <a href="categories.html">Categories</a>
-              <a href="foods.html">Foods</a>
-              <a href="order.html">Order</a>
-              <a href="contact.html">Contact</a>
-              <a href="login.html">Sign In</a>
+        <div class="container">
+            <div class="grid-3">
+                <div class="text-center">
+                    <h3>About Us</h3><br>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat officia, temporibus expedita dicta eligendi harum architecto fugiat sint, laudantium omnis animi. Voluptas praesentium maiores minima pariatur necessitatibus consequuntur, similique assumenda.</p>
+                </div>
+                <div class="texr-center">
+                    <h3>Site Map</h3><br>
+                    <div class="site-links">
+                        <a href="categories.html">Categories</a>
+                        <a href="foods.html">Foods</a>
+                        <a href="order.html">Order</a>
+                        <a href="contact.html">Contact</a>
+                        <a href="login.html">Login</a>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <h3>Social Links</h3><br>
+                    <div class="social">
+                        <ul>
+                            <li><a href="https://youtube.com/@codearcade-se4rc?si=2vBakC9_9-q3AL0y"><img src="https://img.icons8.com/color/48/null/facebook-new.png"/></a></li>
+                            <li><a href="https://youtube.com/@codearcade-se4rc?si=2vBakC9_9-q3AL0y"><img src="https://img.icons8.com/fluency/48/null/instagram-new.png"/></a></li>
+                            <li><a href="https://youtube.com/@codearcade-se4rc?si=2vBakC9_9-q3AL0y"><img src="https://img.icons8.com/color/48/null/twitter--v1.png"/></a></li>
+                            <li><a href="https://youtube.com/@codearcade-se4rc?si=2vBakC9_9-q3AL0y"><img src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png"/></a></li>
+                            <li><a href="https://youtube.com/@codearcade-se4rc?si=2vBakC9_9-q3AL0y"><img src="https://img.icons8.com/color/48/null/youtube-play.png"/></a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="footer-contact">
-            <h3>Contact Us</h3>
-            <div class="contact-info">
-              <p>
-                <i class="fa fa-map-marker"></i> 123 Food Street, Tasty City, FC
-                12345
-              </p>
-              <p><i class="fa fa-phone"></i> +1 (555) 123-4567</p>
-              <p><i class="fa fa-envelope"></i> info@fooddelivery.com</p>
-              <p><i class="fa fa-clock-o"></i> Mon-Sun: 8:00 AM - 11:00 PM</p>
-            </div>
-          </div>
-          <div class="footer-social">
-            <h3>Follow Us</h3>
-            <div class="social">
-              <ul>
-                <li>
-                  <a href="#"
-                    ><img
-                      src="https://img.icons8.com/color/48/null/facebook-new.png"
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img
-                      src="https://img.icons8.com/fluency/48/null/instagram-new.png"
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img
-                      src="https://img.icons8.com/color/48/null/twitter--v1.png"
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img
-                      src="https://img.icons8.com/color/48/null/linkedin-circled--v1.png"
-                  /></a>
-                </li>
-                <li>
-                  <a href="#"
-                    ><img
-                      src="https://img.icons8.com/color/48/null/youtube-play.png"
-                  /></a>
-                </li>
-              </ul>
-            </div>
-            <div class="newsletter">
-              <h4>Subscribe to our newsletter</h4>
-              <form class="subscribe-form">
-                <input type="email" placeholder="Your email address" />
-                <button type="submit" class="btn-primary">Subscribe</button>
-              </form>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
     <!-- Footer Section End -->
 
     <!-- Copyright Section start -->
     <section class="copyright">
-      <div class="container text-center">
-        <p>All rights reserved. Design By <a href="#">Code Arcade</a></p>
-      </div>
-      <a id="back-to-top" class="btn-primary">
-        <i class="fa fa-angle-double-up"></i>
-      </a>
+        <div class="container text-center">
+            <p>All rights reserved. Design By <a href="#">Code Arcade</a></p>
+        </div>
+        <a id="back-to-top" class="btn-primary">
+            <i class="fa fa-angle-double-up"></i>
+        </a>
     </section>
     <!-- Copyright Section End -->
 
@@ -556,5 +281,5 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
     <!-- Custom JS -->
     <script src="js/custom.js"></script>
-  </body>
+</body>
 </html>
